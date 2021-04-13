@@ -11,18 +11,10 @@ builds:
     flags:
       - -trimpath
     goarch:
-      - '386'
       - amd64
-      - arm
-      - arm64
     goos:
       - darwin
-      - freebsd
       - linux
-      - windows
-    ignore:
-      - goarch: '386'
-        goos: darwin
     ldflags:
       - -s -w -X version.ProviderVersion={{.Version}}
     mod_timestamp: '{{ .CommitTimestamp }}'
